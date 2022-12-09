@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="Bootstrap Admin App + jQuery">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+   <title>CCCMS</title>
+   <!-- =============== VENDOR STYLES ===============-->
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- ANIMATE.CSS-->
+   <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+   <!-- WHIRL (spinners)-->
+   <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
+   <!-- =============== PAGE VENDOR STYLES ===============-->
+   <!-- =============== BOOTSTRAP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/bootstrap.css" id="bscss">
+   <!-- =============== APP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/app.css" id="maincss">
+   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+   <style>
+      a:hover {
+         text-decoration: none !important;
+      }
+
+      html {
+         position: relative;
+         /* Allows the footer to notice content height */
+         min-height: 100vh;
+         /* My page will always take the full screen */
+      }
+
+      footer {
+         position: absolute;
+         bottom: 0;
+         /* I want to be on the bottom... */
+         left: 0;
+         /* ...and to the left */
+      }
+
+      
+
+      h1 {
+         color: navy;
+      }
+
+   </style>
+</head>
+
+<body class="layout-h">
+   <div class="wrapper">
+      <!-- top navbar-->
+      <header class="topnavbar-wrapper">
+         <!-- START Top Navbar-->
+         <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <a class="navbar-brand" href="#"><b>Construction Cost Consultancy Management</b></a>
+               </div>
+               <ul class="nav navbar-nav">
+                  <li class="active"><a href="#"><b>Home</b></a></li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="about_us.html"><b>Creators</b></a></li>
+               </ul>
+            </div>
+         </nav>
+         <!-- END Top Navbar-->
+      </header>
+      <!-- sidebar-->
+
+      <!-- offsidebar-->
+
+      <!-- Main section-->
+      <section>
+         <!-- Page content-->
+         <div class="content-wrapper">
+            <div class="content-heading">
+               <h1>  <i class="fa fa-h-square" style="font-size:32px;"></i> Dashboard</h1>
+               <small data-localize="dashboard.WELCOME"></small>
+            </div>
+
+            <div class="row">
+               <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                     <!-- START widget-->
+                     <a href="project.html">
+                        <div class="panel widget bg-success">
+                           <div class="row row-table">
+                              <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                                 <i class="fa fa-home" style="font-size:48px;"></i>
+                              </div>
+                              <div class="col-xs-8 pv-lg">
+                                 <div class="h1 m0 text-bold" id="projectcount"></div>
+                                 <div class="text-uppercase"><b>Project</b></div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <!-- START widget-->
+                     <a href="item.html">
+                        <div class="panel widget bg-success">
+                           <div class="row row-table">
+                              <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                                 <i class="fa fa-hammer" style="font-size:48px;"></i>
+                              </div>
+                              <div class="col-xs-8 pv-lg">
+                                 <div class="h1 m0 text-bold" id="itemcount"></div>
+                                 <div class="text-uppercase"><b>Item</b></div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                     <!-- START widget-->
+                     <a href="labor.html">
+                        <div class="panel widget bg-success">
+                           <div class="row row-table">
+                              <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                                 <i class="fa fa-user" style="font-size:48px;"></i>
+                              </div>
+                              <div class="col-xs-8 pv-lg">
+                                 <div class="h1 m0 text-bold" id="laborcount"></div>
+                                 <div class="text-uppercase"><b>Labor</b></div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+
+                  
+                        <div class="col-lg-4 col-md-6">
+                           <!-- START widget-->
+                           <a href="land.html">
+                              <div class="panel widget bg-success">
+                                 <div class="row row-table">
+                                    <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                                       <i class="fa fa-map" style="font-size:48px;"></i>
+                                    </div>
+                                    <div class="col-xs-8 pv-lg">
+                                       <div class="h1 m0 text-bold" id="landcount"></div>
+                                       <div class="text-uppercase"><b>Land</b></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                           <!-- START widget-->
+                           <a href="transport.html">
+                              <div class="panel widget bg-success">
+                                 <div class="row row-table">
+                                    <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                                       <i class="fa fa-car" style="font-size:48px;"></i>
+                                    </div>
+                                    <div class="col-xs-8 pv-lg">
+                                       <div class="h1 m0 text-bold" id="transportcount"></div>
+                                       <div class="text-uppercase"><b>Transport</b></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                           <!-- START widget-->
+                           <a href="http://localhost:8501/">
+                              <div class="panel widget bg-success">
+                                 <div class="row row-table">
+                                    <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                                       <i class="fa fa-man" style="font-size:48px;"></i>
+                                    </div>
+                                    <div class="col-xs-8 pv-lg">
+                                       <div class="h1 m0 text-bold" id="transportcount"></div>
+                                       <div class="text-uppercase"><b>Consult</b></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+
+
+   
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Page footer-->
+      <footer style=  "color: rgb(0, 0, 0);">
+         <span>&copy; 2022 - Construction Consutancy </span>
+       </footer>
+       
+
+   </div>
+   <!-- =============== VENDOR SCRIPTS ===============-->
+   <!-- MODERNIZR-->
+   <script src="vendor/modernizr/modernizr.custom.js"></script>
+   <!-- JQUERY-->
+   <script src="vendor/jquery/dist/jquery.js"></script>
+   <!-- BOOTSTRAP-->
+   <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+   <!-- STORAGE API-->
+   <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <!-- JQUERY EASING-->
+   <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+   <!-- ANIMO-->
+   <script src="vendor/animo.js/animo.js"></script>
+   <!-- LOCALIZE-->
+   <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+   <!-- =============== APP SCRIPTS ===============-->
+   <script src="app/js/app.js"></script>
+   <script src="js/home.js"></script>
+</body>
+
+</html>
